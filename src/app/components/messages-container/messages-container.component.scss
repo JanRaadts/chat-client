@@ -1,0 +1,8 @@
+.container{
+    width: 100vw;
+    height: 90svh;
+    background-color: white;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}

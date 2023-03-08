@@ -1,0 +1,33 @@
+.form-container{
+    position: absolute;
+    bottom: 0;
+    background-color: #333947;
+    height: 10svh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    width: 80vw;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #586279;
+}
+
+.submitBtn{
+    margin-left: 5px;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(47, 163, 181);
+    border: none;
+    border-radius: 50%;
+}
