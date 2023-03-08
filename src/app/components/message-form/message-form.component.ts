@@ -1,4 +1,5 @@
 import { Component , Output, EventEmitter} from '@angular/core';
+import { nanoid } from 'nanoid';
 import { message } from 'src/app/Interfaces/message';
 import { MessagesService } from 'src/app/services/messages.service';
 
@@ -18,7 +19,8 @@ export class MessageFormComponent {
   onSubmit(){
     let newMessage: message = {
       name: this.name,
-      text: this.text
+      text: this.text,
+      id: nanoid()
     }
     this.onNewMessage.emit(newMessage)
     this.text = ""

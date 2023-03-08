@@ -21,5 +21,10 @@ export class MessagesContainerComponent implements OnInit{
     let newMessage = message
     this.messagesService.sendMessage(message).subscribe((message) => (this.messages.unshift(newMessage)))
   }
+
+  deleteMessage(message: message){
+    let deleteMessage = message
+    this.messagesService.deleteMessage(message).subscribe((message) => (this.messages = this.messages.filter((message) => message.id !== deleteMessage.id)))
+  }
   
 }

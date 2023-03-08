@@ -1,12 +1,13 @@
 .form-container{
     position: absolute;
     bottom: 0;
-    background-color: #333947;
+    background-color: #b8b8b877;
     height: 10svh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 3px solid #0E70A2;
 }
 
 .form{
@@ -16,18 +17,34 @@
 }
 
 .input{
+    padding-left: 5%;
     width: 80vw;
-    height: 2rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #586279;
+    height: 7svh;
+    border-radius: 50px;
+    background-color: #ffffff;
+    border: 2px solid #787777;
+    font-size: 1.2rem;
+  &:focus {
+    outline: none;
+    
+  }
 }
 
 .submitBtn{
-    margin-left: 5px;
-    height: 2rem;
-    width: 2rem;
-    background-color: rgb(47, 163, 181);
+    margin-left: 2px;
+    height: 7svh;
+    width: 7svh;
+    background-color: transparent;
     border: none;
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon{
+        font-size: 2rem;
+        color: #0E70A2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

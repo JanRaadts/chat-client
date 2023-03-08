@@ -1,17 +1,28 @@
 .message-body{
-    background-color: #333947;
-    margin: 1rem 2rem 1rem 1rem;
+    background-color: white;
+    margin: 1rem 1.5rem 0rem 1.5rem;
     border-radius: 10px;
+    position: relative;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .name{
-    color: rgb(171, 82, 231);
+    margin: 0;
+    color: #0E70A2;
     padding: 1rem 1rem 0.3rem 1rem;
 }
 
 .text{
-    color: white;
+    margin: 0;
+    color: black;
     font-size: 1.2rem;
     padding: 0rem 1rem 1rem 1rem;
+}
+
+.delete{
+color: grey;
+position: absolute;
+top: 5px;
+right: 5px
 }
 

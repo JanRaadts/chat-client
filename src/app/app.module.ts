@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { MessagesContainerComponent } from './components/messages-container/messages-container.component';
 import { MessageComponent } from './components/message/message.component';
 import { MessageFormComponent } from './components/message-form/message-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MessageFormComponent } from './components/message-form/message-form.com
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

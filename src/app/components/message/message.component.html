@@ -1,4 +1,5 @@
-<div class="message-body">
+<div class="message-body" @fadeIn>
     <p class="name">{{message.name}}</p>
     <p class="text">{{message.text}}</p>
+    <mat-icon class="delete" (click)="deleteMessage(message)">delete</mat-icon>
 </div>
