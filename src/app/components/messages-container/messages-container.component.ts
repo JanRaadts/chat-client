@@ -17,16 +17,18 @@ export class MessagesContainerComponent implements OnInit{
     const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
       this.messagesService.fetchMessages().subscribe((messages) => this.messages = messages.reverse())
   }, 4000);
-    // this.messagesService.fetchMessages().subscribe((messages) => this.messages = messages.reverse())
   }
 
   addMessage(message: message){
-    this.messagesService.sendMessage(message).subscribe((mess) => (this.correctId(mess)))
+    this.messagesService.sendMessage(message).subscribe((mess) => (this.correctId(mess), this.ScrollIntoView()))
+  }
+
+  ScrollIntoView() {
+    window.scrollBy(0, 10000);
   }
 
 
   deleteMessage(message: message){
-    // let deleteMessage = message
     this.messagesService.deleteMessage(message).subscribe(() => this.messages = this.messages.filter((mess) => mess.id !== message.id))
   }
 
