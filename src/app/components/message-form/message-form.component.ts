@@ -18,9 +18,9 @@ export class MessageFormComponent {
 
   onSubmit(){
     let newMessage: message = {
+      id: nanoid(),
       name: this.name,
       text: this.text,
-      id: nanoid()
     }
     this.onNewMessage.emit(newMessage)
     this.text = ""

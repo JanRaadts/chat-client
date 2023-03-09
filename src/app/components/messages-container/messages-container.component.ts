@@ -18,13 +18,25 @@ export class MessagesContainerComponent implements OnInit{
   }
 
   addMessage(message: message){
-    let newMessage = message
-    this.messagesService.sendMessage(message).subscribe((message) => (this.messages.unshift(newMessage)))
+    this.messagesService.sendMessage(message).subscribe((mess) => (this.correctId(mess)))
   }
 
+
   deleteMessage(message: message){
-    let deleteMessage = message
-    this.messagesService.deleteMessage(message).subscribe((message) => (this.messages = this.messages.filter((message) => message.id !== deleteMessage.id)))
+    // let deleteMessage = message
+    this.messagesService.deleteMessage(message).subscribe(() => this.messages = this.messages.filter((mess) => mess.id !== message.id))
   }
+
+
+  //the id which is coming back from the server after a send is: _id, but we need the id like this: id
+  correctId(data: any){
+    let id = data._id
+    let newMess = {
+     id: id,
+     name: data.name,
+     text: data.text
+    }
+    this.messages.unshift(newMess)
+   }
   
 }
