@@ -1,7 +1,6 @@
 <app-loading-animation *ngIf="messages.length === 0"></app-loading-animation>
 <div class="container">
     <app-message *ngFor="let message of messages" [message]="message" (onDeleteMessage)="deleteMessage($event)"></app-message>
-
 </div>
 <app-message-form (onNewMessage)="addMessage($event)"></app-message-form>
 

@@ -26,6 +26,7 @@ import {
     ])
   ]
 })
+
 export class MessageComponent {
 
   @Output() onDeleteMessage: EventEmitter<message> = new EventEmitter
