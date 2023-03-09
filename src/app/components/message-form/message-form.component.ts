@@ -2,6 +2,8 @@ import { Component , Output, EventEmitter} from '@angular/core';
 import { nanoid } from 'nanoid';
 import { message } from 'src/app/Interfaces/message';
 import { MessagesService } from 'src/app/services/messages.service';
+import { UiChangesService } from '../../services/ui-changes.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-message-form',
@@ -10,13 +12,17 @@ import { MessagesService } from 'src/app/services/messages.service';
 })
 export class MessageFormComponent {
 
-  constructor(private MessageService: MessagesService){}
-
   @Output() onNewMessage: EventEmitter<message> = new EventEmitter
-  name: string = "Jan"
   text!: string
+  subscription!: Subscription;
+  name: string = ""
+
+  constructor(private uiservice: UiChangesService){
+    this.subscription = this.uiservice.onChangedName().subscribe(value => this.name = value)
+  }
 
   onSubmit(){
+    this.uiservice.becomeName()
     let newMessage: message = {
       id: nanoid(),
       name: this.name,

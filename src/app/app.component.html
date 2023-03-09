@@ -1,1 +1,2 @@
-<app-messages-container></app-messages-container>
+<app-messages-container *ngIf="isLogedIn === true"></app-messages-container>
+<app-login *ngIf="isLogedIn === false"></app-login>

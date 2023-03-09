@@ -19,13 +19,11 @@ export class MessagesService {
 
   // send message
   sendMessage(data:message): Observable <message>{
-    console.log(data)
     return this.http.post<message>(this.url, data)
   }
 
   //delete message
   deleteMessage(data: message): Observable <message>{
-    console.log(data)
     let id = data.id
     let deleteUrl = `${this.url}/${id}`
     return this.http.delete<message>(deleteUrl)

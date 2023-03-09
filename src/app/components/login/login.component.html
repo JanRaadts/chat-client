@@ -1,0 +1,7 @@
+<div class="container">
+    <p class="text">Bitte <strong>wähle</strong> einen <strong>Nutzernamen</strong></p>
+    <form class="form" (ngSubmit)="onSubmit()">
+        <input type="text" id="name" name="name" class="input" [(ngModel)]="name" placeholder="Dein Name...">
+        <button class="submitBtn"><mat-icon>login</mat-icon></button>
+    </form>
+</div>

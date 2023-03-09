@@ -12,6 +12,7 @@ import { MessagesContainerComponent } from './components/messages-container/mess
 import { MessageComponent } from './components/message/message.component';
 import { MessageFormComponent } from './components/message-form/message-form.component';
 import { LoadingAnimationComponent } from './components/loading-animation/loading-animation.component';
+import { LoginComponent } from './components/login/login.component';
 
 export function playerFactory(): any {  
   return import('lottie-web');
@@ -25,6 +26,7 @@ export function playerFactory(): any {
     MessageComponent,
     MessageFormComponent,
     LoadingAnimationComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

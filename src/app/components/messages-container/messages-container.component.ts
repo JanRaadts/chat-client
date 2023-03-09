@@ -20,13 +20,8 @@ export class MessagesContainerComponent implements OnInit{
   }
 
   addMessage(message: message){
-    this.messagesService.sendMessage(message).subscribe((mess) => (this.correctId(mess), this.ScrollIntoView()))
+    this.messagesService.sendMessage(message).subscribe((mess) => (this.correctId(mess)))
   }
-
-  ScrollIntoView() {
-    window.scrollBy(0, 10000);
-  }
-
 
   deleteMessage(message: message){
     this.messagesService.deleteMessage(message).subscribe(() => this.messages = this.messages.filter((mess) => mess.id !== message.id))
