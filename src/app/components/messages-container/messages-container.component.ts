@@ -16,7 +16,7 @@ export class MessagesContainerComponent implements OnInit{
   ngOnInit(): void {
     const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
       this.messagesService.fetchMessages().subscribe((messages) => this.messages = messages.reverse())
-  }, 4000);
+  }, 2000);
   }
 
   addMessage(message: message){
