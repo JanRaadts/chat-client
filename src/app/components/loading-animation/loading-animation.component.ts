@@ -10,7 +10,7 @@ import { AnimationOptions } from 'ngx-lottie';
 export class LoadingAnimationComponent {
 
   options: AnimationOptions = {    
-    path: '../../assets/lottie/98194-loading.json' 
+    path: '../../assets/lottie/Chat.json' 
   };  
  
  onAnimate(animationItem: AnimationItem): void {}

@@ -19,10 +19,10 @@ export class MessageFormComponent {
 
   constructor(private uiservice: UiChangesService){
     this.subscription = this.uiservice.onChangedName().subscribe(value => this.name = value)
+    this.uiservice.becomeName()
   }
 
   onSubmit(){
-    this.uiservice.becomeName()
     let newMessage: message = {
       id: nanoid(),
       name: this.name,
